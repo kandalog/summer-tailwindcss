@@ -32,7 +32,7 @@ function Tour() {
             {tourContents.title}
           </h2>
           {/* CONTENTS */}
-          <div className="grid grid-cols-2 mt-10 gap-10">
+          <div className="grid grid-cols-2 mt-10 gap-10 max-md:grid-cols-1">
             {tourContents.img.map((item, index) => (
               <div key={index} className="relative">
                 <Image src={item.img} width={460} height={360} alt="img" />
