@@ -38,7 +38,7 @@ function Navigation() {
   return (
     <>
       {/* WEBメニュー */}
-      <header className="container py-4 mx-auto">
+      <header className="container py-4 mx-auto fixed top-0">
         <div className="flex justify-between">
           <h1 className="text-2xl tracking-wider relative top-1">
             {navigationContents.title}
