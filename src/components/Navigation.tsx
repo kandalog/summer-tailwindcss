@@ -38,38 +38,40 @@ function Navigation() {
   return (
     <>
       {/* WEBメニュー */}
-      <header className="container py-4 mx-auto fixed top-0">
-        <div className="flex justify-between">
-          <h1 className="text-2xl tracking-wider relative top-1">
-            {navigationContents.title}
-          </h1>
-          <nav className="hidden md:block">
-            <ul className="flex items-center space-x-4">
-              {navigationContents.navigation.map((item, index) => (
-                <li
-                  key={index}
-                  className={`${
-                    index === 3
-                      ? "btnPink flex items-center space-x-2 !py-2 !px-5"
-                      : ""
-                  }`}
-                >
-                  <CiMail className={`${index === 3 ? "" : "hidden"}`} />
-                  <Link href={item.href} className="tracking-wider">
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-          {/* モバイル用 */}
-          <div className="md:hidden relative top-3 cursor-pointer">
-            <GiHamburgerMenu
-              onClick={handleNavigation}
-              className="ml-auto mr-4 text-2xl"
-            />
+      <header className="fixed top-0 w-screen py-7">
+       <div className="container px-4 mx-auto">
+          <div className="flex justify-between">
+            <h1 className="text-2xl tracking-wider relative top-1">
+              {navigationContents.title}
+            </h1>
+            <nav className="hidden md:block">
+              <ul className="flex items-center space-x-4">
+                {navigationContents.navigation.map((item, index) => (
+                  <li
+                    key={index}
+                    className={`${
+                      index === 3
+                        ? "btnPink flex items-center space-x-2 !py-2 !px-5"
+                        : ""
+                    }`}
+                  >
+                    <CiMail className={`${index === 3 ? "" : "hidden"}`} />
+                    <Link href={item.href} className="tracking-wider">
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+            {/* モバイル用 */}
+            <div className="md:hidden relative top-3 cursor-pointer">
+              <GiHamburgerMenu
+                onClick={handleNavigation}
+                className="ml-auto mr-4 text-2xl"
+              />
+            </div>
           </div>
-        </div>
+       </div>
       </header>
 
       {/* モバイルメニュー */}
