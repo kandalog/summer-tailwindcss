@@ -3,7 +3,6 @@ import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import LandScape from "@/components/LandScape";
 import Tour from "@/components/Tour";
-import Voice from "@/components/Voice";
 
 export default function Home() {
   return (
@@ -12,7 +11,6 @@ export default function Home() {
       <Features />
       <LandScape />
       <Tour />
-      <Voice />
       <Contact />
     </>
   );
